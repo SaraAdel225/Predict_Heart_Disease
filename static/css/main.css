@@ -1,0 +1,212 @@
+:root{
+    --main-color:#045bdc;
+    --sub-color:rgb(4 91 220 / 70%)
+}
+*{
+    font-family: "Open Sans", sans-serif;
+}
+.main {
+    padding: 30px;
+}
+/* start header */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.header {
+    background-color: var(--sub-color);
+    padding: 5px;
+    margin: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+.header .container {
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+.first li {
+    display: inline;
+}
+.header .first a {
+    text-decoration: none;
+    color:white;
+    margin: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.header a:hover {
+    color: var(--main-color);
+}
+/* end header */
+/* Start main_page */
+.main_page{
+    display: flex;
+    justify-content: space-around;
+    margin-top:100px ;
+}
+.content_write {
+    color: var(--main-color);
+    padding: 50px;
+    width: 40%;
+    letter-spacing: .2px;
+    line-height: 1.5;
+    padding-left: 100px;
+}
+.content_write p{
+    padding-top: 20px ;
+    font-size: 20px;
+}
+.content_write h2{
+    font-weight: 600; 
+    font-size: 40px;
+}
+button{
+    background-color: white;
+    border: 1px solid var(--main-color) ;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 5%;
+    width: 200px;
+    font-size: 18px;
+}
+/* End main_page */
+/* Start page_two */
+.page_two{
+    margin-top: 110px;
+    margin-bottom: 150px;
+}
+.word{
+    color: rgb(4 91 220 / 30%);
+    font-size: 150px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0;
+    margin-top: 100px;
+}
+.content_page_two{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+.content_page_two .sub {
+    border: 1px solid var(--main-color);
+    text-align: center;
+    padding-top: 20px;
+}
+.content_page_two .sub p{
+    color: #777;
+}
+.content_page_two .sub:hover{
+    box-shadow:3px 3px 12px 0px var(--main-color);
+}
+/* End page_two */
+/* Start page_predict */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 50px;
+}
+label {
+    font-size: 25px;
+}
+sup {
+    color:red;
+}
+.section1 , .section2 {
+    width: 48%;
+}
+input {
+    margin-top: 10px;
+    padding: 15px;
+    border: none;
+    width: 95%;
+    border-radius: 3px ;
+    font-size: 20px;
+    outline: none;
+    box-shadow:3px 3px 12px 0px var(--main-color);
+}
+button[type = "submit"] {
+    background-color: var(--main-color);
+    color:white;
+    border: none;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 20px;
+    grid-column: span 3;
+}
+.Button_event{
+    text-align: center;
+}
+.result {
+    background-color: white;
+    border: 1px solid var(--main-color) ;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 20px;
+}
+button:hover {
+    background-color: white;
+    color: var(--main-color);
+    box-shadow:3px 3px 12px 0px var(--main-color);
+}
+.content h3{
+    display: none;
+}
+/* End page_predict */
+/* Start page_content */
+.contact{
+    background-color: var(--sub-color);
+    margin: 0px;
+    width: 100%;
+}
+.last_content {
+    text-align: center;
+    padding: 20px;
+}
+.last_content .sub_content h3{
+    font-size: 40px;
+    color:white
+}
+.last_content .sub_content .social a{
+    margin-left: 15px;
+    font-size: 50px;
+    color: white;
+}
+.last_content .sub_content p{
+    font-size: 20px;
+    color:white
+}
+/* End page_content */
+/* in Mobile */
+@media (max-width: 700px) {
+    .content_write{
+        padding: 20px;
+        width: 100%;
+    }
+    .content {
+        display: block;
+    }
+    .section1 , .section2 {
+        width: 90%;
+    }
+    input{
+        width: 90%;
+    }
+    .main_page img{
+        display: none;
+    }
+    .word {
+        font-size: 90px;
+    }
+    .content .section{
+        margin-top: 30px;
+    }
+}
