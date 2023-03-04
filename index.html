@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="icon" href="{{url_for('static' , filename='hospital-2_icon-icons.com_66067.png')}}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&#038;display=swap" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- start header -->
+    <div class="header" id = 'Home'>
+        <div class="container">
+            <img src="{{url_for('static' , filename='hospital-2_icon-icons.com_66067.png')}}" alt="">
+            <div class="list">
+                <ul class="first">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#predict">Predict</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+    <!-- end header-->
+    <!-- Start main_page -->
+    <div class="main_page">
+    <div class="content_write">
+        <h2>Welcome to Website</h2>
+        <p>This WebSite Will Help You if you does have a Heart Disease or Not,You Can Use it After Reading How To Deal With it and Entering the Correct Data,Click the Button to access the page</p>
+        <button>Go_Page</button>
+    </div>
+    <img src="{{url_for('static' , filename='Doctors-bro.png')}}" alt="" width="500px">
+    </div>
+    <!-- End main_page -->
+    <!-- Start About -->
+    <div class="page_two" id="about">
+        <h1 class="word">About</h1>
+        <div class="content_page_two">
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Sex</h1>
+                <p>(1 = male | 0 = female)</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>CP</h1>
+                <p>chest pain type</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>trestbps</h1>
+                <p>resting blood pressure<br> (in mm Hg on admission to the hospital)</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Chol</h1>
+                <p>serum cholesterol in mg/dl</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Fbs</h1>
+                <p>(fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Restecg</h1>
+                <p>resting electrocardiographic results</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Thalach</h1>
+                <p>maximum heart rate achieved</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Exang</h1>
+                <p>exercise induced angina (1 = yes; 0 = no)</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Oldpeak</h1>
+                <p>ST depression induced by exercise relative to rest</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Slope</h1>
+                <p>the slope of the peak exercise ST segment</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Ca</h1>
+                <p>number of major vessels (0-3)<br> colored by flourosopy</p>
+            </div>
+            <div class="sub">
+                <i class="fa fa-heart" style="font-size:36px;color:rgb(4 91 220 / 70%)"></i>
+                <h1>Thal</h1>
+                <p>normal = 3;<br> fixed defect = 6;<br>reversable defect = 7</p>
+            </div>
+        </div>
+    </div>
+    <!-- End about -->
+    <!-- Start Predict -->
+    <div class="container" id="predict">
+    <h1 class="word">Predict</h1>
+    <form action="/" , method="POST">
+        <div class="content">
+            <div class="section">
+            <label for="age">Age<sup>*</sup></label><br>
+            <input type="number" id="age" name = 'age' min= "1" ,max="100" placeholder="1 - 100">
+            </div>
+            <div class="section">
+            <label for="sex">Sex<sup>*</sup></label><br>
+            <input type="number" id="sex" name = 'sex' min= "0" ,max="1" placeholder="0 - 1">
+            </div>
+            <div class="section">
+            <label for="cp">Cp<sup>*</sup></label><br>
+            <input type="number" id="cp" name = 'cp' min= "0" ,max="3" placeholder="0 - 3">
+            </div>
+            <div class="section">
+            <label for="trestbps">Trestbps<sup>*</sup></label><br>
+            <input type="number" id="trestbps" name = 'trestbps' min= "94" ,max="200" placeholder="94 - 200">
+            </div>
+            <div class="section">
+            <label for="chol">Chol<sup>*</sup></label><br>
+            <input type="number" id="chol" name ='chol' min= "126" ,max="564" placeholder="126 - 564">
+            </div>
+            <div class="section">
+            <label for="fbs">Fbs<sup>*</sup></label><br>
+            <input type="number" id="fbs" name="fbs" min= "0" ,max="1" placeholder="0 - 1">
+            </div>
+            <div class="section">
+            <label for="restecg">Restecg<sup>*</sup></label><br>
+            <input type="number" id="restecg" name="restecg" min= "0" ,max="2" placeholder="0 - 2">
+            </div>
+            <div class="section">
+            <label for="thalach">Thalach<sup>*</sup></label><br>
+            <input type="number" id="thalach" name="thalach" min= "71" ,max="202" placeholder="71 - 202">
+            </div> 
+            <div class="section">
+            <label for="exang">Exang<sup>*</sup></label><br>
+            <input type="number" id="exang" name="exang" min= "0" ,max="1" placeholder="0 - 1">
+            </div>
+            <div class="section">
+            <label for="oldpeak">Oldpeak<sup>*</sup></label><br>
+            <input type="number" id="oldpeak" name="oldpeak" min= "0" ,max="6.2" step="0.1" placeholder="0 - 6.2">
+            </div>
+            <div class="section">
+            <label for="slope">Slope<sup>*</sup></label><br>
+            <input type="number" id="slope" name="slope" min= "0" ,max="2" placeholder="0 - 2">
+            </div>
+            <div class="section">
+            <label for="ca">Ca<sup>*</sup></label><br>
+            <input type="number" id="ca" name="ca" min= "0" ,max="4" placeholder="0 - 4">
+            </div>
+            <div class="section">
+            <label for="thal">Thal<sup>*</sup></label><br>
+            <input type="number" id="thal" name = 'thal' min= "0" ,max="3" placeholder="0 - 3">
+            </div>
+            <button type="submit">Submit to send data</button>
+            <h3 id = "y_predict"> {{ y_predict }} </h3>
+        </form>
+        </div>
+        <div class="Button_event">
+            <button  id="event" class="result">Submit to See result</button>
+        </div>
+<!-- End Predict -->
+<!-- Start Contact --> 
+<div class="last_page">
+<h1 class="word">Contact</h1>
+<div class="contact" id="contact">
+    <div class="last_content">
+        <div class="sub_content">
+            <h3>Contact Us Through</h3>
+            <div class="social">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a>
+                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-home"></i></a>
+                <a href="https://github.com/SaraAdel225"><i class="fa fa-github"></i></a>
+            </div>
+            <p>&#169; Sara Adel 2023</p>
+        </div>
+        <img src="{{url_for('static' , filename='Doctor-rafiki.png')}}" alt="" width="150px">
+    </div>
+</div>
+</div>
+<!-- End Contact -->
+<script>
+    let predict = document.getElementById("y_predict")
+
+    if (JSON.stringify(predict.innerText) == '" 1 "'){
+    document.getElementById("event").addEventListener("click", function() {
+        Swal.fire({
+        icon:'success',
+        title: 'Positive &#128532;',
+        html: "Unfortunately, You Suffer From Heart Disease",
+        footer:'You Should Follow Up With a doctor'
+});
+    });
+}else{
+    document.getElementById("event").addEventListener("click", function() {
+        Swal.fire({
+        icon:'success',
+        title: 'Negative &#128515',
+        html:"Congratulation,You do not Suffer From Heart Disease",
+        footer:'You Must Continue To Maintain Your Health'
+});
+    });
+}
+</script>
+</body>
+</html>
