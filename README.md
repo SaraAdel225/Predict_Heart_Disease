@@ -16,4 +16,4 @@ exang - exercise induced angina (1 = yes; 0 = no)\
 oldpeak - ST depression induced by exercise relative to rest\
 slope - the slope of the peak exercise ST segment\
 ca - number of major vessels (0-3) colored by flourosopy\
-thal - 3 = normal; 6 = fixed defect; 7 = reversable defect\
+thal - 3 = normal; 6 = fixed defect; 7 = reversable defect
